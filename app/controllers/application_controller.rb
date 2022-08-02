@@ -11,11 +11,16 @@ class ApplicationController < Sinatra::Base
   post '/login' do
     @user = User.find_by(username:params[:username], password: params[:password])
     if @user
-      session[:user_id] = @user.id
-      redirect '/users/home'
+
+      get '/users/home' do
+        # @user = User.find(session[:user_id])
+        @user.to_json
+      end
+      # session[:user_id] = @user.id
+      # redirect '/users/home'
     end
-    redirect '/login'
-    @user.to_json
+    # redirect '/login'
+    # @user.to_json
   end
 
   get '/users/home' do
