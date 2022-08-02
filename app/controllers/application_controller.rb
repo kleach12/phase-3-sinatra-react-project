@@ -23,6 +23,19 @@ class ApplicationController < Sinatra::Base
     # @user.to_json
   end
 
+  post '/user/job' do 
+    job = Job.create(
+      postion: params[:postion],
+      company: params[:company],
+      status: params[:status],
+      applieddate: params[:applieddate],
+      responsedate: params[:responsedate],
+      notes: params[:notes],
+      user_id: params[:user_id]
+    )
+    job.to_json
+  end
+
   get '/users/home' do
     @user = User.find(session[:user_id])
     @user.to_json
