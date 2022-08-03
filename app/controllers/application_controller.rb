@@ -17,8 +17,8 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/all' do
-    @users = User.all
-    @users.to_json
+    jobs = Job.all
+    jobs.to_json
   end
 
 
