@@ -2,9 +2,10 @@ class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
   # Add your routes here
-  post '/user/job' do 
+  post '/job' do 
+
     job = Job.create( 
-      position: params[:postion],
+      position: params[:position],
       company: params[:company],
       status: params[:status],
       applieddate: params[:applieddate],
