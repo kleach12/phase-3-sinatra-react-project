@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_03_014155) do
+ActiveRecord::Schema.define(version: 2022_08_12_012808) do
 
   create_table "jobs", force: :cascade do |t|
     t.string "company"
@@ -20,6 +20,8 @@ ActiveRecord::Schema.define(version: 2022_08_03_014155) do
     t.string "position"
     t.string "applieddate"
     t.string "responsedate"
+    t.string "cat"
+    t.integer "cat_id"
   end
 
   create_table "users", force: :cascade do |t|
