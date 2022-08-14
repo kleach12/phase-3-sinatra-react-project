@@ -14,6 +14,7 @@ class ApplicationController < Sinatra::Base
       user_id: params[:user_id],
       cat_id: params[:cat_id]
     )
+
     job.to_json
   end
 
