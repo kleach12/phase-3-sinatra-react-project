@@ -23,6 +23,11 @@ class ApplicationController < Sinatra::Base
     jobs.to_json
   end
 
+  # get '/last' do
+  #   jobs = Job.last
+  #   jobs.to_json
+  # end
+
   delete '/delete/:id' do 
     job = Job.find(params[:id])
     job.destroy
