@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_08_14_212149) do
+ActiveRecord::Schema.define(version: 2022_09_01_210634) do
 
   create_table "categories", force: :cascade do |t|
     t.string "cat"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2022_08_14_212149) do
     t.string "applieddate"
     t.string "responsedate"
     t.string "cat"
-    t.integer "cat_id"
+    t.integer "category_id"
   end
 
   create_table "users", force: :cascade do |t|

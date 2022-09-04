@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /home/kleach12/Development/code/phase-3/phase-3-project/phase-3-sinatra-react-project/app/controllers/application_controller.rb:13 self.POST /createUser:
+
+     [1;34m8[0m:     user.to_json
+     [1;34m9[0m:   [32mend[0m
+    [1;34m10[0m: 
+    [1;34m11[0m:   post [31m[1;31m'[0m[31m/createUser[1;31m'[0m[31m[0m [32mdo[0m 
+    [1;34m12[0m:     user = [1;34;4mUser[0m.find_by([35muserName[0m: params[[33m:userName[0m])
+ => [1;34m13[0m:     binding.pry
+    [1;34m14[0m:     [32mif[0m user 
+    [1;34m15[0m:       user = [1;36mfalse[0m
+    [1;34m16[0m:     [32melse[0m 
+    [1;34m17[0m:       [1;34m# user = true[0m
+    [1;34m18[0m:       user = [1;34;4mUser[0m.create(
+
